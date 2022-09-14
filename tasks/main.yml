@@ -19,7 +19,7 @@
         dest: /etc/mailname
         owner: root
         group: root
-        mode: 0644
+        mode: '644'
       notify: reload postfix
 
     - name: Configure postfix
@@ -28,7 +28,7 @@
         dest: /etc/postfix/main.cf
         owner: root
         group: root
-        mode: 0644
+        mode: '644'
       notify: reload postfix
   become: yes
   tags: [postfix, config]
